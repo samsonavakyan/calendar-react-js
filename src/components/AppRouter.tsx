@@ -8,33 +8,19 @@ const AppRouter: FC = () => {
   return auth ? (
     <Routes>
       {privateRoutes.map((route) => (
-        <>
-          <Route
-            path={route.path}
-            element={<route.component />}
-            key={route.path}
-          />
-          <Route
-            element={<Navigate to={RouteNames.EVENT} />}
-            key={route.path}
-          />
-        </>
+        <React.Fragment key={route.path}>
+          <Route path={route.path} element={<route.component />} />
+          <Route element={<Navigate to={RouteNames.EVENT} />} />
+        </React.Fragment>
       ))}
     </Routes>
   ) : (
     <Routes>
       {publicRoutes.map((route) => (
-        <>
-          <Route
-            path={route.path}
-            element={<route.component />}
-            key={route.path}
-          />
-          <Route
-            element={<Navigate to={RouteNames.LOGIN} />}
-            key={route.path}
-          />
-        </>
+        <React.Fragment key={route.path}>
+          <Route path={route.path} element={<route.component />} />
+          <Route element={<Navigate to={RouteNames.LOGIN} />} />
+        </React.Fragment>
       ))}
     </Routes>
   );
