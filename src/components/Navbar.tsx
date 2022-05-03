@@ -18,7 +18,7 @@ const Navbar: FC = () => {
           <>
             <div style={{ color: 'white' }}>{user.username}</div>{' '}
             <Menu theme="dark" mode="horizontal" selectable={false}>
-              <Menu.Item onClick={() => logout()} key={1}>
+              <Menu.Item onClick={logout} key={1}>
                 Выйти
               </Menu.Item>
             </Menu>
