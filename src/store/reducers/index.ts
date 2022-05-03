@@ -1,7 +1,9 @@
 import auth from './auth';
+import event from './event';
 
 const reducers = {
-	auth,
-}
+  auth,
+  event,
+};
 
-export default reducers
+export default reducers;
