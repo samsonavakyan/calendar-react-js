@@ -1,4 +1,4 @@
-import { AppDispatch } from '../..';
+import { AppDispatch } from '../../index';
 import UserService from '../../../api/UserService';
 import { IEvent } from '../../../models/IEvent';
 import { IUser } from '../../../models/IUser';
